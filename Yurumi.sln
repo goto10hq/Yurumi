@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yurumi", "Yurumi\Yurumi.csproj", "{85C5A99F-5270-49B9-B2EB-3335E87635DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yurumi.Sample", "Yurumi.Sample\Yurumi.Sample.csproj", "{102BE2E9-333D-48CD-88A5-721E6807EF23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85C5A99F-5270-49B9-B2EB-3335E87635DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85C5A99F-5270-49B9-B2EB-3335E87635DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85C5A99F-5270-49B9-B2EB-3335E87635DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85C5A99F-5270-49B9-B2EB-3335E87635DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{102BE2E9-333D-48CD-88A5-721E6807EF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102BE2E9-333D-48CD-88A5-721E6807EF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102BE2E9-333D-48CD-88A5-721E6807EF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102BE2E9-333D-48CD-88A5-721E6807EF23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

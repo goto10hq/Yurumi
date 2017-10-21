@@ -1,10 +1,15 @@
-﻿using System;
+﻿using System.Collections.Specialized;
+
 namespace Yurumi.Configurations
 {
-    public class PlainSmtpConfiguration
+    /// <summary>
+    /// Plain smtp configuration.
+    /// </summary>
+    public class PlainSmtpConfiguration : IConfiguration
     {
-        public PlainSmtpConfiguration()
-        {
-        }
+        /// <summary>
+        /// Get header values.
+        /// </summary>
+        public NameValueCollection HeaderValues { get; } = new NameValueCollection();
     }
 }

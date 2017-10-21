@@ -1,10 +1,16 @@
-﻿using System;
+﻿using System.Collections.Specialized;
+
 namespace Yurumi.Configurations
 {
-    public class IConfiguration
+    /// <summary>
+    /// Configuration interface.
+    /// </summary>
+    public interface IConfiguration
     {
-        public IConfiguration()
-        {
-        }
+        /// <summary>
+        /// Gets the header values.
+        /// </summary>
+        /// <value>The header values.</value>
+        NameValueCollection HeaderValues { get; }
     }
 }

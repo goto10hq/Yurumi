@@ -1,10 +1,10 @@
-﻿using System;
-namespace Yurumi.Connections
+﻿namespace Yurumi.Connections
 {
-    public class IConnection
+    /// <summary>
+    /// Connection interface.
+    /// </summary>
+    public interface IConnection<T> where T:class
     {
-        public IConnection()
-        {
-        }
+        T Client { get; }
     }
 }

@@ -4,4 +4,18 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.6.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.0.0" />
+    <PackageReference Include="Sushi2" Version="1.0.5" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tokens\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Encoders\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Connections\" />
+  </ItemGroup>
 </Project>

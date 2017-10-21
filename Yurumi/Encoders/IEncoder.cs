@@ -1,15 +1,29 @@
-﻿namespace Yurumi.Converters
+﻿using System.Text;
+
+namespace Yurumi.Encoders
 {
     /// <summary>
-    /// Converter interface.
+    /// Encoder interface.
     /// </summary>
-    public interface IConverter
+    public interface IEncoder
     {
         /// <summary>
-        /// Converts the specified input.
+        /// Encodes the specified input.
         /// </summary>
-        /// <returns>The converted input.</returns>
+        /// <returns>The encoded input.</returns>
         /// <param name="input">Input.</param>
-        string Convert(string input);
+        string Encode(string input);
+
+        /// <summary>
+        /// Gets the charset.
+        /// </summary>
+        /// <value>The charset.</value>
+        string Charset { get; }
+
+        /// <summary>
+        /// Gets the encoding.
+        /// </summary>
+        /// <value>The encoding.</value>
+        Encoding Encoding { get; }
     }
 }
