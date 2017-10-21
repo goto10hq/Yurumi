@@ -33,7 +33,8 @@ mailer.SendFromFileAsync
  new System.Net.Mail.MailAddress("noreply@yuru.mi"),
  new System.Net.Mail.MailAddressCollection { "me@me.com" },
  "[TEST] Yurumi",
- new Dictionary<string, object> { { "Salutation", "Hello my lovely robot," } });
+ new Dictionary<string, object> { { "Salutation", "Hello my lovely robot," } }
+);
 ```
 
 ## License
