@@ -11,7 +11,7 @@
     <PackageProjectUrl>https://github.com/goto10hq/Yurumi</PackageProjectUrl>
     <Summary>Extremely easy and cute library for sending HTML e-mails.</Summary>
     <Description>Extremely easy and cute library for sending HTML e-mails.</Description>
-    <PackageTags>smtp email sendgrid mailgun</PackageTags>
+    <PackageTags>smtp email sendgrid mailgun html-templates</PackageTags>
     <Copyright>Copyright (c) 2017 Goto10 s.r.o.</Copyright>
     <Company>Goto10</Company>
     <RepositoryUrl>https://github.com/goto10hq/Yurumi</RepositoryUrl>
