@@ -27,15 +27,25 @@ var connection = new Connections.SmtpConnection
 var configuration = new Configurations.SendGridConfiguration("Yurumi", true);
 var mailer = new Mailer(connection, configuration);
 
-mailer.SendFromFileAsync
+mailer.SendFromFile
 ( 
- "Template/index.html",
- new System.Net.Mail.MailAddress("noreply@yuru.mi"),
- new System.Net.Mail.MailAddressCollection { "me@me.com" },
- "[TEST] Yurumi",
- new Dictionary<string, object> { { "Salutation", "Hello my lovely robot," } }
+     "Template/index.html",
+     new System.Net.Mail.MailAddress("noreply@yuru.mi"),
+     new System.Net.Mail.MailAddressCollection { "me@me.com" },
+     "[TEST] Yurumi",
+     new Dictionary<string, object> { { "Salutation", "Hello my lovely robot," } }
 );
 ```
+
+## HTML template
+
+Images are autoprocessed as ``linked resources``.
+
+There is only a very simple ``tag replacements`` implemented. Use tags like that in HTML file: `{something}`. And then replace them this way: `new Dictionary<string, object> { { "something", "Aloha!" } }`
+
+## Acknowledgement
+
+Based on my lib [Drool](https://github.com/goto10hq/Drool) which becames too funky and not working in .NET Core because of too close ties with ASP.NET Mvc.
 
 ## License
 
