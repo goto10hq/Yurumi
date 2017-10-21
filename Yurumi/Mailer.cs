@@ -92,9 +92,46 @@ namespace Yurumi
         /// <param name="replyTos">Reply tos.</param>
         /// <param name="ccs">Ccs.</param>
         /// <param name="attachments">Attachments.</param>
+        public void SendFromFile(string fullPath, MailAddress from, MailAddressCollection tos, string subject, Dictionary<string, object> replacements = null, MailAddressCollection replyTos = null,
+                                    MailAddressCollection ccs = null, IEnumerable<Attachment> attachments = null)
+        {
+            if (fullPath == null)
+                throw new ArgumentNullException(nameof(fullPath));
+            
+            if (@from == null)
+                throw new ArgumentNullException(nameof(@from));
+
+            if (tos == null)
+                throw new ArgumentNullException(nameof(tos));
+
+            if (subject == null)
+                throw new ArgumentNullException(nameof(subject));
+
+            if (!Regex.IsMatch(@from.Address, RegexPatterns.Email))
+                throw new Exception($"From address {@from.Address} is not valid e-mail.");
+
+            AsyncTools.RunSync(() => SendFromFileAsync(fullPath, from, tos, subject, replacements, replyTos, ccs, attachments));
+        }
+
+
+        /// <summary>
+        /// Sends the e-mail from the file.
+        /// </summary>
+        /// <returns>The async.</returns>
+        /// <param name="fullPath">Full path to template.</param>
+        /// <param name="from">From.</param>
+        /// <param name="tos">Tos.</param>
+        /// <param name="subject">Subject.</param>
+        /// <param name="replacements">Replacements.</param>
+        /// <param name="replyTos">Reply tos.</param>
+        /// <param name="ccs">Ccs.</param>
+        /// <param name="attachments">Attachments.</param>
         public async Task SendFromFileAsync(string fullPath, MailAddress from, MailAddressCollection tos, string subject, Dictionary<string, object> replacements = null, MailAddressCollection replyTos = null, 
                                     MailAddressCollection ccs = null, IEnumerable<Attachment> attachments = null)
         {
+            if (fullPath == null)
+                throw new ArgumentNullException(nameof(fullPath));
+            
             if (@from == null)
                 throw new ArgumentNullException(nameof(@from));
 

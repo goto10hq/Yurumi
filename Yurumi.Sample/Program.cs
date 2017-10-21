@@ -7,7 +7,7 @@ namespace Yurumi.Sample
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var appSettings = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -31,8 +31,8 @@ namespace Yurumi.Sample
             var from = appSettings["From"];
             var to = appSettings["To"];
 
-            AsyncTools.RunSync(() => mailer.SendFromFileAsync
-            ( 
+            mailer.SendFromFile
+            (
               "Template/index.html",
               new System.Net.Mail.MailAddress(from),
               new System.Net.Mail.MailAddressCollection { to },
@@ -43,7 +43,6 @@ namespace Yurumi.Sample
                 { "Yes", "http://www.goto10.cz" },
                 { "No", "http://www.github.com" }
               }
-            )
             );
         }
     }

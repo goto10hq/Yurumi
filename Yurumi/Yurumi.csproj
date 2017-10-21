@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Yurumi</PackageId>
     <Title>Yurumi</Title>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>frohikey</Authors>
     <PackageLicenseUrl>https://github.com/goto10hq/Yurumi/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>Goto10</Owners>
@@ -15,7 +15,7 @@
     <Copyright>Copyright (c) 2017 Goto10 s.r.o.</Copyright>
     <Company>Goto10</Company>
     <RepositoryUrl>https://github.com/goto10hq/Yurumi</RepositoryUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/goto10hq/Yurumi/master/yurumi-icon.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/goto10hq/Yurumi/master/yurumi-logo.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
