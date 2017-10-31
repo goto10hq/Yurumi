@@ -45,7 +45,7 @@ There is only a very simple ``tag replacements`` implemented. Use tags like that
 
 ## Acknowledgement
 
-Based on my lib [Drool](https://github.com/goto10hq/Drool) which becames too funky and not working in .NET Core because of too close ties with ASP.NET Mvc.
+Based on my lib [Drool](https://github.com/goto10hq/Drool) which becames too funky and not working in .NET Core because of too close ties with ASP.NET MVC.
 
 ## License
 
