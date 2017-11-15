@@ -18,13 +18,13 @@ namespace Yurumi.Sample
 
             var connection = new Connections.SmtpConnection
             (
-                 appSettings["Server"], 
-                 appSettings["Port"].ToInt32().Value, 
-                 appSettings["Login"], 
-                 appSettings["Password"], 
+                 appSettings["Server"],
+                 appSettings["Port"].ToInt32().Value,
+                 appSettings["Login"],
+                 appSettings["Password"],
                  appSettings["EnableSsl"].ToBoolean().Value
             );
-            
+
             var configuration = new Configurations.SendGridConfiguration("Yurumi", true);
             var mailer = new Mailer(connection, configuration);
 

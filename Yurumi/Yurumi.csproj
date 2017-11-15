@@ -27,7 +27,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tokens\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Encoders\" />
     <Folder Include="Configurations\" />
     <Folder Include="Connections\" />

@@ -14,6 +14,7 @@ using System.Linq;
 using Sushi2;
 using System.Text.RegularExpressions;
 using System.Net.Mime;
+using Yurumi.Helpers;
 
 namespace Yurumi
 {
@@ -38,14 +39,14 @@ namespace Yurumi
         /// <param name="configuration">Configuration.</param>
         /// <param name="encoder">Encoder.</param>
         public Mailer(IConnection<SmtpClient> connection, IConfiguration configuration, IEncoder encoder) : base(connection, configuration, encoder)
-        {            
+        {
         }
     }
 
     /// <summary>
     /// Mailer.
     /// </summary>
-    public class Mailer<T> where T:class
+    public class Mailer<T> where T : class
     {
         readonly IConnection<T> _connection;
         readonly IConfiguration _configuration;
@@ -97,7 +98,7 @@ namespace Yurumi
         {
             if (fullPath == null)
                 throw new ArgumentNullException(nameof(fullPath));
-            
+
             if (@from == null)
                 throw new ArgumentNullException(nameof(@from));
 
@@ -113,7 +114,6 @@ namespace Yurumi
             AsyncTools.RunSync(() => SendFromFileAsync(fullPath, from, tos, subject, replacements, replyTos, ccs, attachments));
         }
 
-
         /// <summary>
         /// Sends the e-mail from the file.
         /// </summary>
@@ -126,12 +126,12 @@ namespace Yurumi
         /// <param name="replyTos">Reply tos.</param>
         /// <param name="ccs">Ccs.</param>
         /// <param name="attachments">Attachments.</param>
-        public async Task SendFromFileAsync(string fullPath, MailAddress from, MailAddressCollection tos, string subject, Dictionary<string, object> replacements = null, MailAddressCollection replyTos = null, 
+        public async Task SendFromFileAsync(string fullPath, MailAddress from, MailAddressCollection tos, string subject, Dictionary<string, object> replacements = null, MailAddressCollection replyTos = null,
                                     MailAddressCollection ccs = null, IEnumerable<Attachment> attachments = null)
         {
             if (fullPath == null)
                 throw new ArgumentNullException(nameof(fullPath));
-            
+
             if (@from == null)
                 throw new ArgumentNullException(nameof(@from));
 
@@ -207,6 +207,9 @@ namespace Yurumi
 
             mail.AlternateViews.Add(htmlView);
 
+            mail.Body = content.ToPlainText();
+            mail.IsBodyHtml = false;
+
             if (attachments != null)
             {
                 var attachmentList = attachments as IList<Attachment> ?? attachments.ToList();
@@ -225,7 +228,7 @@ namespace Yurumi
             var smtpClient = _client as SmtpClient;
 
             if (smtpClient != null)
-                await smtpClient.SendMailAsync(mail);   
+                await smtpClient.SendMailAsync(mail);
         }
 
         EmailTemplate GetTemplate(string fullPath)
@@ -236,7 +239,8 @@ namespace Yurumi
             {
                 var template = _templatesCache.Get<EmailTemplate>(normalizedFullPath);
 
-                if (template == null) {
+                if (template == null)
+                {
                     template = GetTemplateFromFile(fullPath);
                     _templatesCache.Set(normalizedFullPath, template);
                 }
