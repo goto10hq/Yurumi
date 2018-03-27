@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Yurumi</PackageId>
     <Title>Yurumi</Title>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Authors>frohikey</Authors>
     <PackageLicenseUrl>https://github.com/goto10hq/Yurumi/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>Goto10</Owners>
@@ -20,7 +20,7 @@
     <PackageReference Include="HtmlAgilityPack" Version="1.7.2" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.0.1" />
-    <PackageReference Include="Sushi2" Version="1.2.2" />
+    <PackageReference Include="Sushi2" Version="1.2.3" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup>
