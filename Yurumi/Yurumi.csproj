@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Yurumi</PackageId>
     <Title>Yurumi</Title>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>frohikey</Authors>
     <PackageLicenseUrl>https://github.com/goto10hq/Yurumi/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>Goto10</Owners>
@@ -12,12 +11,11 @@
     <Summary>Extremely easy and cute library for sending HTML e-mails.</Summary>
     <Description>Extremely easy and cute library for sending HTML e-mails.</Description>
     <PackageTags>smtp email sendgrid mailgun html-templates</PackageTags>
-    <Copyright>Copyright (c) 2017 Goto10 s.r.o.</Copyright>
+    <Copyright>Copyright (c) 2017-2018 Goto10 s.r.o.</Copyright>
     <Company>Goto10</Company>
     <RepositoryUrl>https://github.com/goto10hq/Yurumi</RepositoryUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/goto10hq/Yurumi/master/yurumi-logo.png</PackageIconUrl>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.7.2" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
