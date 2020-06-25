@@ -15,7 +15,15 @@
     <Company>Goto10</Company>
     <RepositoryUrl>https://github.com/goto10hq/Yurumi</RepositoryUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/goto10hq/Yurumi/master/yurumi-logo.png</PackageIconUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.7.2" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
